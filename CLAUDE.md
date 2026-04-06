@@ -1,13 +1,5 @@
 # Career-Ops -- AI Job Search Pipeline
 
-## Origin
-
-This system was built and used by [santifer](https://santifer.io) to evaluate 740+ job offers, generate 100+ tailored CVs, and land a Head of Applied AI role. The archetypes, scoring logic, negotiation scripts, and proof point structure all reflect his specific career search in AI/automation roles.
-
-The portfolio that goes with this system is also open source: [cv-santiago](https://github.com/santifer/cv-santiago).
-
-**It will work out of the box, but it's designed to be made yours.** If the archetypes don't match your career, the modes are in the wrong language, or the scoring doesn't fit your priorities -- just ask. You (Claude) can edit the user's files. The user says "change the archetypes to data engineering roles" and you do it. That's the whole point.
-
 ## Data Contract (CRITICAL)
 
 There are two layers. Read `DATA_CONTRACT.md` for the full list.
@@ -157,14 +149,8 @@ This system is designed to be customized by YOU (Claude). When the user asks you
 
 ### Language Modes
 
-Default modes are in `modes/` (English). Additional language-specific modes are available:
+Default modes are in `modes/` (English). 
 
-- **German (DACH market):** `modes/de/` — native German translations with DACH-specific vocabulary (13. Monatsgehalt, Probezeit, Kündigungsfrist, AGG, Tarifvertrag, etc.). Includes `_shared.md`, `angebot.md` (evaluation), `bewerben.md` (apply), `pipeline.md`.
-
-**When to use German modes:** If the user is targeting German-language job postings, lives in DACH, or asks for German output. Either:
-1. User says "use German modes" → read from `modes/de/` instead of `modes/`
-2. User sets `language.modes_dir: modes/de` in `config/profile.yml` → always use German modes
-3. You detect a German JD → suggest switching to German modes
 
 **When NOT to:** If the user applies to English-language roles, even at German companies, use the default English modes.
 
